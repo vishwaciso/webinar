@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Master Webinar | Vishwanath Gowda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body{
+      margin:0;
+      font-family:Segoe UI,system-ui,Arial,sans-serif;
+      background:#020617;
+      color:#e5e7eb;
+      overflow-x:hidden;
+    }
+    header{
+      position:relative;
+      padding:100px 10% 130px;
+      background:radial-gradient(circle at top,#0ea5e9,#020617 70%);
+      overflow:hidden;
+    }
+    h1{font-size:3.4rem;margin-bottom:15px;color:#ffffff;}
+    h2{font-size:2.4rem;color:#38bdf8;margin-bottom:30px;}
+    h3{font-size:1.5rem;color:#22d3ee;margin-top:30px;}
+    p,li{font-size:1.05rem;line-height:1.9;color:#cbd5f5;}
+    section{padding:90px 10%;border-bottom:1px solid #1e293b;}
+    .card{background:rgba(2,6,23,0.95);border:1px solid #1e293b;border-radius:22px;padding:45px;margin-top:35px;box-shadow:0 0 40px rgba(56,189,248,0.15);}    
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:35px;}
+
+    /* GLOBAL ATTACK LAYER – STICKY EVERYWHERE */
+    .attack-layer{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      overflow:hidden;
+    }
+
+    .attack{
+      position:absolute;
+      color:rgba(203,213,245,0.28);
+      font-weight:600;
+      white-space:nowrap;
+    }
+
+    /* directions */
+    .drop{animation:drop linear infinite;}
+    .rise{animation:rise linear infinite;}
+    .left{animation:moveLeft linear infinite;}
+    .right{animation:moveRight linear infinite;}
+
+    @keyframes drop{from{transform:translateY(-120px);}to{transform:translateY(120vh);}}
+    @keyframes rise{from{transform:translateY(120vh);}to{transform:translateY(-120px);}}
+    @keyframes moveLeft{from{transform:translateX(100vw);}to{transform:translateX(-200px);}}
+    @keyframes moveRight{from{transform:translateX(-200px);}to{transform:translateX(100vw);}}
+
+    .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:35px;margin-top:35px;}
+    .tool{text-align:center;}
+    .tool i{font-size:42px;color:#38bdf8;margin-bottom:10px;}
+    footer{text-align:center;padding:40px;color:#94a3b8;font-size:14px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- GLOBAL ATTACK LAYER -->
+  <div class="attack-layer">
+    <!-- Dropping -->
+    <span class="attack drop" style="left:5%;animation-duration:22s">DDoS</span>
+    <span class="attack drop" style="left:15%;animation-duration:28s">SQL Injection</span>
+    <span class="attack drop" style="left:25%;animation-duration:26s">Ransomware</span>
+
+    <!-- Rising -->
+    <span class="attack rise" style="left:35%;animation-duration:30s">Zero-Day</span>
+    <span class="attack rise" style="left:45%;animation-duration:24s">MITM</span>
+
+    <!-- Left to Right -->
+    <span class="attack right" style="top:20%;animation-duration:32s">Phishing</span>
+    <span class="attack right" style="top:40%;animation-duration:29s">Credential Stuffing</span>
+
+    <!-- Right to Left -->
+    <span class="attack left" style="top:60%;animation-duration:27s">CSRF</span>
+    <span class="attack left" style="top:80%;animation-duration:31s">SSRF</span>
+  </div>
+
+  <!-- HERO CONTENT -->
+  <div style="position:relative;z-index:1;text-align:center">
+    <h1>Cybersecurity Master Webinar</h1>
+    <p>Threats Everywhere. Defense Starts Here.</p>
+
+    <!-- HAT SYMBOLS -->
+    <div style="display:flex;justify-content:center;gap:50px;margin-top:40px;flex-wrap:wrap">
+      <div>
+        <i class="fa-solid fa-user-secret" style="font-size:52px;color:#ef4444"></i>
+        <p style="margin-top:10px;color:#fecaca">Black Hat Hacker</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-user-shield" style="font-size:52px;color:#22c55e"></i>
+        <p style="margin-top:10px;color:#bbf7d0">White Hat Hacker</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-user-ninja" style="font-size:52px;color:#eab308"></i>
+        <p style="margin-top:10px;color:#fde68a">Grey Hat Hacker</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Instructor Profile</h2>
+  <div class="card">
+    <h3>Vishwanath Gowda</h3>
+    <p>Senior Cybersecurity Professional with <strong>14+ years of experience</strong> working in a multinational organization.</p>
+    <p>Trained and mentored <strong>5000+ students and professionals</strong> across cybersecurity, cloud security, SOC and DevSecOps.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Cybersecurity – Theory (Full)</h2>
+  <div class="card">
+    <p>Cybersecurity is the discipline of protecting digital assets such as systems, networks, applications, cloud platforms, AI models and data from cyber threats.</p>
+    <h3>Why Cybersecurity is Required</h3>
+    <ul>
+      <li>Protect sensitive customer and business data</li>
+      <li>Prevent financial loss and fraud</li>
+      <li>Ensure regulatory compliance</li>
+      <li>Maintain trust and business continuity</li>
+    </ul>
+    <h3>Core Principles (CIA Triad)</h3>
+    <ul>
+      <li>Confidentiality – Prevent unauthorized access</li>
+      <li>Integrity – Prevent unauthorized modification</li>
+      <li>Availability – Ensure systems are always accessible</li>
+    </ul>
+    <h3>Cybersecurity Sub Domains</h3>
+    <ul>
+      <li>GRC (Governance, Risk & Compliance)</li>
+      <li>Network & Infrastructure Security</li>
+      <li>Application Security</li>
+      <li>Cloud Security</li>
+      <li>SOC & Incident Response</li>
+      <li>AI & Emerging Technology Security</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Cloud Security – Theory + Practical</h2>
+  <div class="card">
+    <p>Cloud security focuses on protecting data, applications and infrastructure hosted in cloud platforms such as AWS, Azure and GCP.</p>
+    <h3>Shared Responsibility Model</h3>
+    <p>Cloud provider secures the cloud, customer secures what is inside the cloud.</p>
+    <h3>Common Cloud Attacks</h3>
+    <ul>
+      <li>Public S3 bucket exposure</li>
+      <li>IAM privilege escalation</li>
+      <li>Insecure APIs</li>
+    </ul>
+    <h3>Practical Lab</h3>
+    <p>Identify misconfigured cloud storage and review access permissions.</p>
+    <h3>Output</h3>
+    <p>Understanding of cloud risks and mitigation strategies.</p>
+  </div>
+</section>
+
+<section>
+  <h2>SOC (Security Operations Center)</h2>
+  <div class="card">
+    <p>SOC is responsible for continuous monitoring, detection and response to security incidents.</p>
+    <h3>Key SOC Functions</h3>
+    <ul>
+      <li>Log monitoring</li>
+      <li>Threat detection</li>
+      <li>Incident response</li>
+    </ul>
+    <h3>Practical Lab</h3>
+    <p>Analyze authentication logs and detect brute-force activity.</p>
+    <h3>Output</h3>
+    <p>Ability to read logs and identify suspicious behavior.</p>
+  </div>
+</section>
+
+<section>
+  <h2>AI Security</h2>
+  <div class="card">
+    <p>AI security focuses on securing machine learning models, training data and inference pipelines.</p>
+    <h3>AI Security Risks</h3>
+    <ul>
+      <li>Data poisoning</li>
+      <li>Model theft</li>
+      <li>Prompt injection</li>
+    </ul>
+    <h3>Practical Discussion</h3>
+    <p>Identify risks in AI-based chat systems and mitigation techniques.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Practicals & Labs</h2>
+  <div class="card">
+    <ul>
+      <li>Network scanning using Nmap</li>
+      <li>Web application testing using Burp Suite</li>
+      <li>Cloud security checks using AWS CLI</li>
+      <li>SOC log analysis using Splunk</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>2 Hour Webinar Agenda</h2>
+  <div class="card">
+    <ul>
+      <li>0 – 15 min: Cybersecurity fundamentals</li>
+      <li>15 – 35 min: Cybersecurity domains & threats</li>
+      <li>35 – 55 min: Cloud security theory + demo</li>
+      <li>55 – 75 min: SOC operations & log analysis</li>
+      <li>75 – 95 min: Application & AI security</li>
+      <li>95 – 115 min: Hands-on labs overview</li>
+      <li>115 – 120 min: Career guidance & Q&A</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Tools Covered</h2>
+  <div class="card">
+    <div class="tools">
+      <div class="tool"><i class="fa-solid fa-network-wired"></i><p>Nmap</p></div>
+      <div class="tool"><i class="fa-solid fa-bug"></i><p>Burp Suite</p></div>
+      <div class="tool"><i class="fa-solid fa-skull-crossbones"></i><p>Metasploit</p></div>
+      <div class="tool"><i class="fa-brands fa-aws"></i><p>AWS</p></div>
+      <div class="tool"><i class="fa-solid fa-chart-line"></i><p>Splunk</p></div>
+      <div class="tool"><i class="fa-brands fa-github"></i><p>GitHub</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Vishwanath Gowda | Cybersecurity Master Webinar</p>
+</footer>
+
+</body>
+</html>
